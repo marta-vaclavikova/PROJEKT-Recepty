@@ -5,6 +5,9 @@ html { box-sizing: border-box; }
 body {
 	margin: 0;
 	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: white;
 }
 
 .paticka {
@@ -33,3 +36,94 @@ Nastav je receptům jako obrázky na pozadí (tj. nepřidávej je jako <img> do 
 Na rozložení prvků NEPOUŽÍVEJ absolutní pozicování, ale pouze flexboxy.
 Flexboxy mohou být vnořené do sebe, klidně několikrát.
 */
+
+h2.recept-nazev {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 800;
+	margin: 0;
+}
+
+.hlavni-recept h2 {
+	font-size: 28px;
+}
+
+.recepty h2 {
+	font-size: 18px;
+}
+
+.hlavni-recept {
+	min-height: 200px;
+	background: url(./images/salat.jpg) no-repeat center/cover;
+}
+
+.recept {
+	min-height: 90px;
+}
+
+.recept, .hlavni-recept {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.recept-meta {
+	display: flex;
+	justify-content: space-between;
+}
+
+.recept1 {
+	background: url(./images/chlebicek.jpg) no-repeat center/cover;
+}
+.recept2 {
+	background: url(./images/tacos.jpg) no-repeat center/cover;
+}
+.recept3 {
+	background: url(./images/cizrna.jpg) no-repeat center/cover;
+}
+.recept4 {
+	background: url(./images/burger.jpg) no-repeat center/cover;
+}
+
+@media screen and (min-width:480px) {
+	.hlavni-recept {
+		min-height: 250px;
+	}
+	
+	.recept {
+		min-height: 150px;
+		flex: 0 0 50%;
+	}
+	.recept, .hlavni-recept {
+		padding: 20px;
+	}
+	.hlavni-recept h2 {
+		font-size: 36px;
+	}
+	.recepty h2 {
+		font-size: 22px;
+	}
+	.recepty {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (min-width:860px) {
+	.hlavni-recept {
+		min-height: 400px;
+	}
+	
+	.recept {
+		min-height: 200px;
+	}
+	.hlavni-recept h2 {
+		font-size: 48px;
+	}
+	.recepty h2 {
+		font-size: 28px;
+	}
+	.doporucujeme {
+		display: flex;
+	}
+}
